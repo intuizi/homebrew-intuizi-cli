@@ -5,12 +5,12 @@
 class Intuizi < Formula
   desc "Official Intuizi CLI, a single-binary client for the Intuizi API v2"
   homepage "https://intuizi.com"
-  version "0.1.15"
+  version "0.1.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/intuizi/intuizi-cli/releases/download/v0.1.15/intuizi_0.1.15_darwin_amd64.tar.gz"
-      sha256 "4749dc886f5f8560012cfbbb600f3e8947a62a05e8f2d352055e76e90f18abae"
+      url "https://github.com/intuizi/intuizi-cli/releases/download/v0.1.16/intuizi_0.1.16_darwin_amd64.tar.gz"
+      sha256 "8eacd86d58e3ab8f228e5e16f6130b474bd31a036ceafbc0c9a3a63c1a7be503"
 
       define_method(:install) do
         bin.install "intuizi"
@@ -18,8 +18,8 @@ class Intuizi < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/intuizi/intuizi-cli/releases/download/v0.1.15/intuizi_0.1.15_darwin_arm64.tar.gz"
-      sha256 "5ec630bfa7a3a484f1bfd707f9ecbf401a5e83bd2a12455c5da77afc7b8fb663"
+      url "https://github.com/intuizi/intuizi-cli/releases/download/v0.1.16/intuizi_0.1.16_darwin_arm64.tar.gz"
+      sha256 "6e32c0413ac52b07a23702fb3188a13bfeea5670ba89680dc2dab4a7adc27200"
 
       define_method(:install) do
         bin.install "intuizi"
@@ -30,16 +30,16 @@ class Intuizi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/intuizi/intuizi-cli/releases/download/v0.1.15/intuizi_0.1.15_linux_amd64.tar.gz"
-      sha256 "8ca50a68bb8df439ae5e84a6331c82d1b4fe73585663dba9259c3b959f319fdc"
+      url "https://github.com/intuizi/intuizi-cli/releases/download/v0.1.16/intuizi_0.1.16_linux_amd64.tar.gz"
+      sha256 "e8be124e49b29547821b3fe88458215eab8d99038427cf7598eb58cad154310a"
       define_method(:install) do
         bin.install "intuizi"
         generate_completions_from_executable(bin/"intuizi", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/intuizi/intuizi-cli/releases/download/v0.1.15/intuizi_0.1.15_linux_arm64.tar.gz"
-      sha256 "9615031d9e44016130eb7ffe35f6aad399626829c5db815fcc1242cb9aa9fed0"
+      url "https://github.com/intuizi/intuizi-cli/releases/download/v0.1.16/intuizi_0.1.16_linux_arm64.tar.gz"
+      sha256 "44e5527bd30df52e65a7e795148fc4929365bef3837974a3d39d817a09c16d03"
       define_method(:install) do
         bin.install "intuizi"
         generate_completions_from_executable(bin/"intuizi", "completion")
